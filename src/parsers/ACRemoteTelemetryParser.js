@@ -1,4 +1,4 @@
-import { Parser } from 'binary-parser';
+let { Parser } = require('binary-parser');
 
 class ACRemoteTelemetryParser extends Parser {
   /**
@@ -9,4 +9,4 @@ class ACRemoteTelemetryParser extends Parser {
   }
 }
 
-export default ACRemoteTelemetryParser;
+module.exports = ACRemoteTelemetryParser;

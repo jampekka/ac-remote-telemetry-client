@@ -1,4 +1,4 @@
-import ACRemoteTelemetryParser from './ACRemoteTelemetryParser';
+let ACRemoteTelemetryParser = require('./ACRemoteTelemetryParser');
 
 class RTLapParser extends ACRemoteTelemetryParser {
   constructor() {
@@ -13,4 +13,4 @@ class RTLapParser extends ACRemoteTelemetryParser {
   }
 }
 
-export default RTLapParser;
+module.exports = RTLapParser;

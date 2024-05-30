@@ -1,4 +1,4 @@
-import ACRemoteTelemetryParser from './ACRemoteTelemetryParser';
+let ACRemoteTelemetryParser = require('./ACRemoteTelemetryParser');
 
 class RTCarInfoParser extends ACRemoteTelemetryParser {
   constructor() {
@@ -117,4 +117,4 @@ class RTCarInfoParser extends ACRemoteTelemetryParser {
   }
 }
 
-export default RTCarInfoParser;
+module.exports = RTCarInfoParser;

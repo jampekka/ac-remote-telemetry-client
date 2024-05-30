@@ -1,4 +1,4 @@
-import ACRemoteTelemetryParser from './ACRemoteTelemetryParser';
+let ACRemoteTelemetryParser = require('./ACRemoteTelemetryParser');
 
 class HandshakerResponseParser extends ACRemoteTelemetryParser {
   constructor() {
@@ -14,4 +14,4 @@ class HandshakerResponseParser extends ACRemoteTelemetryParser {
   }
 }
 
-export default HandshakerResponseParser;
+module.exports = HandshakerResponseParser;

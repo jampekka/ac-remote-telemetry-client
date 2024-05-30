@@ -1,10 +1,18 @@
 // AC Remote Telemetry specification https://docs.google.com/document/d/1KfkZiIluXZ6mMhLWfDX1qAGbvhGRC3ZUzjVIt5FQpp4/pub
 
-import * as dgram from 'dgram';
+/*import * as dgram from 'dgram';
 import { EventEmitter } from 'events';
 import HandshakerResponseParser from './parsers/HandshakerResponseParser';
 import RTCarInfoParser from './parsers/RTCarInfoParser';
 import RTLapParser from './parsers/RTLapParser';
+*/
+
+let { EventEmitter } = require('events');
+let HandshakerResponseParser = require('./parsers/HandshakerResponseParser');
+let RTCarInfoParser = require('./parsers/RTCarInfoParser');
+let RTLapParser = require('./parsers/RTLapParser');
+let dgram = require('dgram');
+
 
 /**
  * The connection port number of the Assetto Corsa server (ACServer)
@@ -169,4 +177,6 @@ class ACRemoteTelemetryClient extends EventEmitter {
   }
 }
 
+
+ACRemoteTelemetryClient.event_names = event;
 module.exports = ACRemoteTelemetryClient;
